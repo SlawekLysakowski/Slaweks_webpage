@@ -9,6 +9,45 @@
 <body>
 <div id="container">
 
+
+
+    <div class="frame">
+        <div id="switches">
+            <p class="show">Show English</p>
+            <input type="checkbox" id="english"
+                   class="checkbox" />
+            <label for="english" class="toggle">
+                <p class="onOff">OFF ON</p>
+            </label>
+            <p class="show">Show Polish</p>
+            <input type="checkbox" id="polish"
+                   class="checkbox" />
+            <label for="polish" class="toggle">
+                <p class="onOff">OFF ON</p>
+            </label>
+            <p id ="correct" class="nbr"></p> <br>
+            <p id="wrong" class="nbr"></p> <br>
+        </div>
+
+        <div class="displayedWord">
+            <h1 id="word"></h1>
+
+            <p id = englishWord>'word'</p>
+            <p id = polishWord>'word'</p>
+
+        </div>
+
+        </label>
+
+
+        <label>Enter your answer</label>
+        <input id="enter-word" type="text">
+        <input id= 'check' type="button" value="Check">
+
+        <h2 id="feedback"></h2>
+
+
+</div>
 </div>
 </body>
 </html>
