@@ -16,14 +16,27 @@ body {
 
 .frame {
     position: center;
-    border: black;
-    border-style: double;
+    border: double black;
     box-sizing: inherit;
     margin-top: 30px;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
     background-color: aquamarine;
 
 }
+
+#direction {
+    display: flex;
+}
+
+#translation {
+    height: 22px;
+    width: 22px;
+    position: relative;
+
+    left: 5px;
+    top: 13px;
+}
+
 .displayedWord {
 
     color: black;
@@ -76,14 +89,14 @@ height: 22px;
 #correct {
     width: 160px;
     color: green;
-    margin-left: 275px;
+    margin-left: 265px;
     margin-top: -80px;
 }
 
 #wrong {
     width: 200px;
     color: red;
-    margin-left: 280px;
+    margin-left: 268px;
     margin-top: -30px;
 }
 
@@ -96,11 +109,11 @@ height: 22px;
     margin-left: 60px;
 }
 
-.toggle {
+.toggle  {
 
     position : relative ;
     display : flex;
-    width : 45px;
+    width : 49px;
     height : 15px;
     background-color: red;
     border-radius: 20px;
@@ -108,10 +121,10 @@ height: 22px;
     margin-top: -10px;
     margin-left: 40px;
 }
-.toggle:after {
+.toggle:after  {
     content: '';
     position: absolute;
-    width: 20px;
+    width: 25px;
     height: 13px;
     border-radius: 50%;
     background-color: black;
@@ -123,7 +136,7 @@ height: 22px;
 .onOff {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 /* Checkbox checked effect */
@@ -136,7 +149,6 @@ height: 22px;
     background-color: green;
 }
 
-/* Checkbox vanished */
 .checkbox {
     display : none;
 }
