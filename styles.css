@@ -4,22 +4,31 @@ body {
 }
 
 #container {
-    width: 1348px;
-    height: 700px;
+    width: 800px;
+    height: 550px;
     background-color: skyblue;
     display: flex;
     justify-content: space-evenly;
-    margin: 0;
-    border: none;
+    margin: 0 auto;
+    padding-bottom: 30px;
 
 }
+/*nav {*/
+/*    display: grid;*/
+/*    height: 50px;*/
+/*    grid-template-columns: repeat(4, 1fr);*/
 
+/*    font-size: 18px;*/
+/*    grid-auto-flow: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 .frame {
     position: center;
     border: double black;
     box-sizing: inherit;
     margin-top: 30px;
-    margin-bottom: 200px;
+    margin-bottom: 30px;
     background-color: aquamarine;
 
 }
@@ -35,6 +44,10 @@ body {
 
     left: 5px;
     top: 13px;
+}
+.words-array-box {
+    font-size: xx-small;
+    color: black;
 }
 
 .displayedWord {
