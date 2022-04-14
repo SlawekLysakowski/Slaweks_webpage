@@ -11,36 +11,46 @@
 </head>
 <body>
 <div id="container">
-<!--    <nav>-->
-<!--        <a href="#">Introduction</a>-->
-<!--        <a href="#">Curriculum Vitae</a>-->
-<!--        <a href="index.html">Korean vocab tool</a>-->
-<!--        <a href="#">Training tool</a>-->
+    <nav>
+        <a href="indexMain.html">Introduction</a>
+        <a href="#">Curriculum Vitae</a>
+        <a href="index.html">Korean vocab tool</a>
+        <a href="#">Training tool</a>
 
-<!--    </nav>-->
+    </nav>
     <div class="frame">
-        <div id="direction">
-            <p id="transDirection">Translation: JAP : KOR</p>
-            <button id="translation">⇆</button>
-        </div>
-        <div id="switches">
-            <p class="show">Show English</p>
+        <div id="control-panel">
+            <p id="transDirection">Translation: </p>
+            <button id="translation">JAP : KOR</button>
+
+            <p class="show">          Show English</p>
             <input type="checkbox" id="english"
                    class="checkbox" />
             <label for="english" class="toggle">
                 <p class="onOff">OFF ON</p>
             </label>
-            <p class="show">Show Polish</p>
+            <p class="show">           Show Polish</p>
             <input type="checkbox" id="polish"
                    class="checkbox" />
             <label for="polish" class="toggle">
                 <p class="onOff">OFF ON</p>
             </label>
-            <p id ="correct" class="nbr"></p> <br>
-            <p id="wrong" class="nbr"></p> <br>
+            <p id ="correct" class="nbr"></p>
+            <p id="wrong" class="nbr"></p>
         </div>
+
         <div class="words-array-box">
-            <p id="words"></p>
+            <p id="current-word">Current word:</p> <br>
+            <p id="word-1"></p>
+            <p id="word-2"></p>
+            <p id="word-3"></p>
+            <p id="word-4"></p>
+            <p id="word-5"></p>
+            <p id="word-6"></p>
+            <p id="word-7"></p>
+            <p id="word-8"></p>
+            <p id="word-9"></p>
+            <p id="word-10"></p>
         </div>
 
         <div class="displayedWord">
@@ -49,17 +59,13 @@
             <p id = englishWord></p>
             <p id = polishWord></p>
 
-        </div>
-
-
-
-        <label>Enter your answer</label>
+        </div >
+        <div id="answer-box">
+        <label id="enter">Enter your answer</label>
         <input id="enter-word" type="text">
         <input id= 'check' type="button" value="Check">
-
+        </div>
         <h2 id="feedback"></h2>
-
-
 </div>
 </div>
 </body>

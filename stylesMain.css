@@ -11,17 +11,17 @@ body {
     position: relative;
 }
 
-.container {
+#container {
     width: 80%;
     margin: 0 auto;
-    background-color: #66d9e8;
-    background-color: #99e9f2;
 
 
 }
 
 nav {
     display: grid;
+    background-color: #99e9f2;
+
     height: 50px;
     grid-template-columns: repeat(4, 1fr);
 
@@ -37,6 +37,7 @@ nav {
     }
     nav {
     font-weight: bold;
+        width: 100%;
 
     }
 }
