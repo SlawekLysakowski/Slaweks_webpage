@@ -1,9 +1,5 @@
 'use strict';
 
-
-// export const word = 'dziala';
-
-console.log('exporting module')
  export const japaneseWords = [
     ['あらかじめ', '前もって'],'勤勉する',['節約する','せつやくする' ],'楽しむ','順番で','文字','音感','優れている','社交的 ',
     '手付きがよい','才能','説得力がある','物分りが速い','責任感が強い','手筋がいい','(卒業後の)進路をきめる','性(適性)に合っている',
@@ -46,7 +42,7 @@ export const koreanWords = ['미리','부지런하다','아끼다','즐기다','
     '면접','떨어지다','괴롭다','조용히','포기','연인','회의','열리다','축제','조언','항상','방해가 되다', '틀림없이','고등학교','동창',
     '손가락질','바꾼다','지적하다','재료','당연','골을 내다','직접','뻔하다','발끈하다','변동','열등재','인하하다','전날','희망','견적',
 ];
-export let polishWords = ['przed czasem, wcześniej','ciężko pracować','oszczędzać','bawić się, cieszyć się','po kolei','litery','zmysł słuchu',
+export const polishWords = ['przed czasem, wcześniej','ciężko pracować','oszczędzać','bawić się, cieszyć się','po kolei','litery','zmysł słuchu',
     'wybitny','towarzyski, społeczny','mieć zręczne ręce','umiejętność','przekonujący','szybko rozumieć',
     'silne poczucie odpowiedzialności',' Mieć talent, mieć zdolności','wybierać ścieżkę kariery','pasować do zdolności',
     'ból gardła','Wybierać','zapisz swojego majora','artystyczny','użyteczne','towarzyski','aktywny','pozytywny,radosny',
@@ -74,7 +70,7 @@ export let polishWords = ['przed czasem, wcześniej','ciężko pracować','oszcz
     'wymieniać','wskazać','materiał, składnik','oczywiście', 'Złościć się','bezpośrednio','oczywisty, znany','wściec się','zmiana, fluktuacja',
     'towar niskiej jakości', 'ściągać, opuszczać, zmniejszać','ostatnio, parę dni temu','nadzieja','oferta, wycena',
 ];
-export let englishWords = ['already','Be diligent','economising, saving','enjoy','In turn, in order','letters','hearing sense','outstanding',
+export const englishWords = ['already','Be diligent','economising, saving','enjoy','In turn, in order','letters','hearing sense','outstanding',
     'sociable','good dexterity','skill','persuasive','quick to understand','strong sense of responsibility','have a knack',
     'choose a career path','fit the aptitude','sore throat','Choose','save your major','artistic','useful','sociable','active',
     'positive','meeting','thirsty','eyes are dim','stiff neck','feel upset','(feeling of) tightness in the chest','blocked',
