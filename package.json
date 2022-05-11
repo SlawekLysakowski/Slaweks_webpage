@@ -2,7 +2,7 @@
   "name": "slaweks_website",
   "version": "1.0.0",
   "description": "Slawek's portfolio website",
-  "main": "script.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
