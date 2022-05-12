@@ -11,14 +11,17 @@ window.onload = function () {
     let highlightedWord;
    const updateWords = function () {
        if (wordsArray.length === 0) newWordsArray(japToKor? japaneseWords : koreanWords);
-       for (let i = 0; i < wordsArray.length; i++) {
-         document.getElementById(`word-${i+1}`).textContent = wordsArray[i];
+       wordsArray.forEach((word, i) => {
+         console.log(word, i)
+       
+
+         document.getElementById(`word-${i+1}`).textContent = word;
          document.getElementById(`word-${i + 1}`).style.color = '#495057';
 
           if (wordsArray.length < 10) {
             document.getElementById(`word-${wordsArray.length + 1}`).textContent = '';
          }
-      }
+       })
    }
    const newWordsArray = function (vocab) {
       wordsArray =  [...new Array(10)]
@@ -70,7 +73,7 @@ window.onload = function () {
       }
    })
 
-   const hideShow = function (selectedSwitch, word) {
+   const hideShowlang = function (selectedSwitch, word) {
       document.getElementById(`${selectedSwitch}`).addEventListener("click", function () {
       if (document.getElementById(`${word}`).style.display === "grid") {
          document.getElementById(`${word}`).style.display = "none";
@@ -98,8 +101,8 @@ window.onload = function () {
          console.log(wordIndex);
      }
 
-  hideShow('polish','polishWord');
-  hideShow('english','englishWord');
+  hideShowlang('polish','polishWord');
+  hideShowlang('english','englishWord');
 
    const correct = function () {
       newWord();
@@ -111,7 +114,7 @@ window.onload = function () {
       setTimeout(function () {
          document.getElementById('feedback').textContent = ``;
       }, 2000);
-   }
+   };
 
    const wrongAnswer = function () {
       newWord();
@@ -121,11 +124,7 @@ window.onload = function () {
       setTimeout(function () {
          document.getElementById('feedback').textContent = ``;
       }, 3500);
-   }
-
-
-
-
+   };
 
       const checkAnswer = function () {
          let input = document.getElementById("enter-word").value;
@@ -136,7 +135,7 @@ window.onload = function () {
                correct();
             } else {
                document.getElementById('feedback').textContent =
-                   `wrong answer! 😢 Correct answer was: \u00A0
+                   `wrong answer! 😢 Correct answer was: \u00A0 \u00A0
                    ` +  `  ${answerKor}`;
                wrongAnswer();
             }
@@ -153,7 +152,7 @@ window.onload = function () {
             } else {
 
                document.getElementById('feedback').textContent =
-                   `wrong answer! 😢 Correct answer was: \u00A0
+                   `wrong answer! 😢 Correct answer was: \u00A0 \u00A0
                      ${answerJpy}`;
                wrongAnswer();
             }
