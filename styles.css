@@ -1,29 +1,24 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 
-}
 
 
 html {
 }
 
 body {
+    height: 100vh;
     color: #495057;
     font-family: sans-serif;
-    position: relative;
     font-size: 25px;
     background-image: linear-gradient(to bottom right, #ade5d4, #8398e8);
-
+    /*height: 2000px;*/
 
 
 
 }
 
 #container {
-    height: 800px;
+    height: 90vh;
   margin: 30px auto;
   width: 70%;
   border: 1px solid black;
