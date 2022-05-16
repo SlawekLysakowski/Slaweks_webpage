@@ -10,10 +10,11 @@ window.onload = function () {
     let wordsArray = [];
     let highlightedWord;
    const updateWords = function () {
-       if (wordsArray.length === 0) newWordsArray(japToKor? japaneseWords : koreanWords);
+       if (wordsArray.length === 0) {
+         newWordsArray(japToKor? japaneseWords : koreanWords);
+         appSizing();
+       }
        wordsArray.forEach((word, i) => {
-         console.log(word, i)
-       
 
          document.getElementById(`word-${i+1}`).textContent = word;
          document.getElementById(`word-${i + 1}`).style.color = '#495057';
@@ -95,10 +96,10 @@ window.onload = function () {
          document.getElementById('polishWord').textContent = polishWords[wordIndex];
          document.getElementById('englishWord').textContent = englishWords[wordIndex];
          document.getElementById("enter-word").value = "";
-         console.log(wordsArray.indexOf(randomWord));
+         // console.log(wordsArray.indexOf(randomWord));
          updateWords();
          highlightedWord = document.getElementById(`word-${wordsArray.indexOf(randomWord) +1}`).style.color = '#ff4800';
-         console.log(wordIndex);
+         // console.log(wordIndex);
      }
 
   hideShowlang('polish','polishWord');
@@ -170,6 +171,15 @@ window.onload = function () {
    // console.log(polishWords.length);
    // console.log(englishWords.length);
    // console.log(polishWords[180])
+  const appSizing = function () {
+    const box = document.querySelector('.word-array-box');
+    const height =  box.scrollHeight;
+     box.style.height = `${height}px`;
+    // console.log(height)
+  }
+  appSizing();
+
+
 
 };
 
