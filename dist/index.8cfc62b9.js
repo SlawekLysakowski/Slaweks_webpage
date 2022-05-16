@@ -576,6 +576,7 @@ window.onload = function() {
             japToKor = !japToKor;
             document.getElementById('translation').textContent = 'KOR : JAP';
             newWordsArray(_vocabularyJs.koreanWords);
+            appSizing();
             // randomWord = 0;
             newWord();
             highlightedWord = document.getElementById(`word-${wordsArray.indexOf(randomWord) + 1}`).style.color = '#ff4800';
@@ -583,6 +584,7 @@ window.onload = function() {
             japToKor = !japToKor;
             document.getElementById('translation').textContent = 'JAP : KOR';
             newWordsArray(_vocabularyJsDefault.default);
+            appSizing();
             newWord();
             highlightedWord = document.getElementById(`word-${wordsArray.indexOf(randomWord) + 1}`).style.color = '#ff4800';
         }

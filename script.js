@@ -61,15 +61,19 @@ window.onload = function () {
         japToKor = !japToKor;
        document.getElementById('translation').textContent = 'KOR : JAP';
        newWordsArray(koreanWords);
-       // randomWord = 0;
-       newWord();
+        appSizing();
+
+        // randomWord = 0;
+          newWord();
           highlightedWord = document.getElementById(`word-${wordsArray.indexOf(randomWord) +1}`).style.color = '#ff4800';
 
       } else {
          japToKor = !japToKor;
          document.getElementById('translation').textContent = 'JAP : KOR';
          newWordsArray(japaneseWords);
-          newWord();
+         appSizing();
+
+        newWord();
           highlightedWord = document.getElementById(`word-${wordsArray.indexOf(randomWord) +1}`).style.color = '#ff4800';
       }
    })
