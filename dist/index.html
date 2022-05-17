@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Slawek's webpage</title>
@@ -15,15 +15,18 @@
         <a href="/indexMain.html">Introduction</a>
         <a href="#">Curriculum Vitae</a>
         <a href="/index.html">Korean vocab tool</a>
-        <a href="/mapty.html">Training tool</a>
+        <a href="/Mapty/mapty.html">Training tool</a>
 
     </nav>
     <div class="app">
         <div id="control-panel">
-            <p id="transDirection">Translation: </p>
+            <p id="transDirection" class="panel-button">Translation: </p>
             <button id="translation">JAP : KOR</button>
 
-            <p class="show-lang"> Show English</p>
+          <button id="showVocabList" class="panel-button" onclick="location.href=`vocabList.html`;">Show Vocabulary</button>
+
+
+          <p class="show-lang"> Show English</p>
             <input type="checkbox" id="english" class="checkbox">
             <label for="english" class="toggle">
                 <p class="onOff">OFF ON</p>
@@ -35,6 +38,10 @@
             </label>
             <p id="correct" class="nbr"></p>
             <p id="wrong" class="nbr"></p>
+          <br>
+
+
+
         </div>
 
         <div class="word-array-box">

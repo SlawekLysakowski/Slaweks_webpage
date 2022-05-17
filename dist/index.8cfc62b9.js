@@ -535,6 +535,7 @@ window.onload = function() {
     let highlightedWord;
     const updateWords = function() {
         if (wordsArray.length === 0) {
+            document.querySelector('.word-array-box').style.height = '';
             newWordsArray(japToKor ? _vocabularyJsDefault.default : _vocabularyJs.koreanWords);
             appSizing();
         }
@@ -571,22 +572,17 @@ window.onload = function() {
     document.getElementById('englishWord').textContent = randomEngWord;
     document.getElementById('correct').textContent = `Correct answers: ${correctNbr}`;
     document.getElementById('wrong').textContent = `Wrong answers:\u00A0 ${wrongNbr}`;
-    document.getElementById('translation').addEventListener('click', function() {
-        if (japToKor) {
-            japToKor = !japToKor;
-            document.getElementById('translation').textContent = 'KOR : JAP';
-            newWordsArray(_vocabularyJs.koreanWords);
-            // randomWord = 0;
-            newWord();
-            highlightedWord = document.getElementById(`word-${wordsArray.indexOf(randomWord) + 1}`).style.color = '#ff4800';
-        } else {
-            japToKor = !japToKor;
-            document.getElementById('translation').textContent = 'JAP : KOR';
-            newWordsArray(_vocabularyJsDefault.default);
-            newWord();
-            highlightedWord = document.getElementById(`word-${wordsArray.indexOf(randomWord) + 1}`).style.color = '#ff4800';
-        }
-    });
+    const switchTransDir = function() {
+        japToKor = !japToKor;
+        console.log(japToKor);
+        document.getElementById('translation').textContent = japToKor ? `KOR : JAP` : 'JAP : KOR';
+        document.querySelector('.word-array-box').style.height = '';
+        newWordsArray(japToKor ? _vocabularyJsDefault.default : _vocabularyJs.koreanWords);
+        appSizing();
+        newWord();
+        highlightedWord = document.getElementById(`word-${wordsArray.indexOf(randomWord) + 1}`).style.color = '#ff4800';
+    };
+    document.getElementById('translation').addEventListener('click', switchTransDir);
     const hideShowlang = function(selectedSwitch, word) {
         document.getElementById(`${selectedSwitch}`).addEventListener("click", function() {
             if (document.getElementById(`${word}`).style.display === "grid") document.getElementById(`${word}`).style.display = "none";
@@ -666,12 +662,20 @@ window.onload = function() {
     // console.log(englishWords.length);
     // console.log(polishWords[180])
     const appSizing = function() {
-        const box = document.querySelector('.word-array-box');
-        const height = box.scrollHeight;
-        box.style.height = `${height}px`;
-    // console.log(height)
+        const wordsDiv = document.querySelector('.word-array-box');
+        const word = document.querySelector('#word-1');
+        const height = wordsDiv.scrollHeight;
+        const fontSize = word.fontSize;
+        console.log(fontSize);
+        wordsDiv.style.height = `${height}px`;
     };
     appSizing();
+//
+// const goToVocabList = function () {
+//   window.location.href='vocabList.html';
+// }
+//
+// document.getElementById('showVocabList').addEventListener('click', goToVocabList);
 };
 
 },{"./vocabulary.js":"gTAhr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kMnXP","6rimH"], "6rimH", "parcelRequire99e3")
