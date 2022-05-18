@@ -666,8 +666,12 @@ window.onload = function() {
         const word = document.querySelector('#word-1');
         const height = wordsDiv.scrollHeight;
         const fontSize = word.fontSize;
-        console.log(fontSize);
+        console.log(height, fontSize);
         wordsDiv.style.height = `${height}px`;
+        if (height > 500) {
+            wordsDiv.style.height = `460px`;
+            wordsDiv.style.fontSize = `21px`;
+        } else wordsDiv.style.fontSize = `25px`;
     };
     appSizing();
 //
