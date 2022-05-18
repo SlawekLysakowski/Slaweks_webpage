@@ -663,15 +663,17 @@ window.onload = function() {
     // console.log(polishWords[180])
     const appSizing = function() {
         const wordsDiv = document.querySelector('.word-array-box');
-        const word = document.querySelector('#word-1');
         const height = wordsDiv.scrollHeight;
-        const fontSize = word.fontSize;
-        console.log(height, fontSize);
+        const heightRatio = height / visualViewport.height;
+        const displayedWord = document.querySelector('.displayedWord');
+        console.log(height, heightRatio);
         wordsDiv.style.height = `${height}px`;
-        if (height > 500) {
-            wordsDiv.style.height = `460px`;
-            wordsDiv.style.fontSize = `21px`;
-        } else wordsDiv.style.fontSize = `25px`;
+        if (heightRatio > 0.82) {
+            wordsDiv.style.height = `80%`;
+            wordsDiv.style.fontSize = `19px`;
+        } else wordsDiv.style.fontSize = `24px`;
+        if (displayedWord.scrollHeight / displayedWord.scrollWidth > 0.47) displayedWord.style.fontSize = `20px`;
+        console.log(displayedWord.scrollHeight, displayedWord.scrollWidth);
     };
     appSizing();
 //

@@ -20,7 +20,7 @@ body {
 
 #container {
   margin: 30px auto;
-  width: 70%;
+  width: 75%;
 
   border: 1px solid black;
   border-radius: 25px;
@@ -65,6 +65,7 @@ a:active {
 }
 
 .app {
+  height: 70%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
