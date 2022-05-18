@@ -178,15 +178,61 @@ h2 {
   display: none;
 }
 
-#translation, #translation:visited {
+#translation, #showVocabList, #showVocabList:visited, #translation:visited {
   width: 70%;
   margin-top: 10px;
 }
 
-#translation:hover, #translation:active, #check:hover, #check:active {
+#translation:hover, #showVocabList:hover, #showVocabList:active, #translation:active, #check:hover, #check:active {
   cursor: pointer;
   background-color: #b6b4b4;
   font-weight: bold;
+}
+
+td {
+  height: 50px;
+  vertical-align: center;
+}
+
+#vocab-container {
+  grid-column: 1 / 5;
+  padding: 30px;
+  display: grid;
+}
+
+#id {
+  border: 1px solid #000;
+  grid-column: 1 / 2;
+  align-content: center;
+  display: grid;
+}
+
+#jap-vocab {
+  border: 1px solid #000;
+  grid-column: 2 / 4;
+  align-content: center;
+  display: grid;
+}
+
+#kor-vocab {
+  border: 1px solid #000;
+  grid-column: 4 / 6;
+  align-content: center;
+  display: grid;
+}
+
+#eng-vocab {
+  border: 1px solid #000;
+  grid-column: 6 / 7;
+  align-content: center;
+  display: grid;
+}
+
+#pol-vocab {
+  border: 1px solid #000;
+  grid-column: 7 / 8;
+  align-content: center;
+  display: grid;
 }
 
 @media screen and (max-width: 900px) {
