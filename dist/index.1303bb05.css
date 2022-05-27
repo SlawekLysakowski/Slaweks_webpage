@@ -247,23 +247,8 @@ td {
     font-weight: bold;
   }
 
-  .app {
+  .app, #translation #showVocabList {
     width: 100%;
-    grid-row-gap: 20px;
-  }
-
-  #translation {
-    width: 100%;
-  }
-
-  #answer-box {
-    text-align: center;
-    grid-row: 2 / 4;
-    align-content: center;
-  }
-
-  #enter-word {
-    width: 60%;
   }
 }
 

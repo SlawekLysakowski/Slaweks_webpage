@@ -567,14 +567,17 @@ window.onload = function() {
     const randomEngWord = _vocabularyJs.englishWords[wordIndex];
     let index = wordsArray.indexOf(randomWord);
     highlightedWord = wordsArray[index];
-    document.getElementById('word').textContent = wordsArray[index];
+    const displayedWord = document.querySelector('#current-display-word');
+    document.getElementById('current-display-word').textContent = wordsArray[index];
     document.getElementById('polishWord').textContent = randomPolWord;
     document.getElementById('englishWord').textContent = randomEngWord;
     document.getElementById('correct').textContent = `Correct answers: ${correctNbr}`;
     document.getElementById('wrong').textContent = `Wrong answers:\u00A0 ${wrongNbr}`;
+    if (displayedWord.textContent.length > 9) displayedWord.style.fontSize = `21px`;
+    else displayedWord.style.fontSize = `35px`;
+    console.log(displayedWord.style.fontSize);
     const switchTransDir = function() {
         japToKor = !japToKor;
-        console.log(japToKor);
         document.getElementById('translation').textContent = japToKor ? `KOR : JAP` : 'JAP : KOR';
         document.querySelector('.word-array-box').style.height = '';
         newWordsArray(japToKor ? _vocabularyJsDefault.default : _vocabularyJs.koreanWords);
@@ -593,7 +596,10 @@ window.onload = function() {
         newRandomNumber = Math.trunc(Math.random() * wordsArray.length);
         randomWord = wordsArray[newRandomNumber];
         wordIndex = japToKor ? _vocabularyJsDefault.default.indexOf(randomWord) : _vocabularyJs.koreanWords.indexOf(randomWord);
-        document.getElementById('word').textContent = randomWord;
+        document.getElementById('current-display-word').textContent = randomWord;
+        if (displayedWord.textContent.length > 9) displayedWord.style.fontSize = `21px`;
+        else displayedWord.style.fontSize = `35px`;
+        console.log(displayedWord.style.fontSize);
         japToKor ? answerKor = _vocabularyJs.koreanWords[wordIndex] : answerJpy = _vocabularyJsDefault.default[wordIndex];
         document.getElementById('polishWord').textContent = _vocabularyJs.polishWords[wordIndex];
         document.getElementById('englishWord').textContent = _vocabularyJs.englishWords[wordIndex];
@@ -663,25 +669,20 @@ window.onload = function() {
     // console.log(polishWords[180])
     const appSizing = function() {
         const wordsDiv = document.querySelector('.word-array-box');
-        const height = wordsDiv.scrollHeight;
-        const heightRatio = height / visualViewport.height;
-        const displayedWord = document.querySelector('.displayedWord');
-        console.log(height, heightRatio);
-        wordsDiv.style.height = `${height}px`;
-        if (heightRatio > 0.82) {
+        const wordsDivHeight = wordsDiv.scrollHeight;
+        const heightRatio = wordsDivHeight / visualViewport.height;
+        console.log(wordsDivHeight, heightRatio);
+        wordsDiv.style.height = `${wordsDivHeight}px`;
+        if (heightRatio > 0.80) {
             wordsDiv.style.height = `80%`;
-            wordsDiv.style.fontSize = `19px`;
-        } else wordsDiv.style.fontSize = `24px`;
-        if (displayedWord.scrollHeight / displayedWord.scrollWidth > 0.47) displayedWord.style.fontSize = `20px`;
-        console.log(displayedWord.scrollHeight, displayedWord.scrollWidth);
+            wordsDiv.style.fontSize = `20px`;
+        }
+        if (heightRatio < 0.50) {
+            wordsDiv.style.height = `70%`;
+            wordsDiv.style.fontSize = `45px`;
+        }
     };
     appSizing();
-//
-// const goToVocabList = function () {
-//   window.location.href='vocabList.html';
-// }
-//
-// document.getElementById('showVocabList').addEventListener('click', goToVocabList);
 };
 
 },{"./vocabulary.js":"gTAhr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kMnXP","6rimH"], "6rimH", "parcelRequire99e3")

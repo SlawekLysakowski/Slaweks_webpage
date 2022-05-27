@@ -55,7 +55,7 @@ window.onload = function () {
   document.getElementById('correct').textContent = `Correct answers: ${correctNbr}`;
   document.getElementById('wrong').textContent = `Wrong answers:\u00A0 ${wrongNbr}`;
   if (displayedWord.textContent.length > 9) {
-    displayedWord.style.fontSize = `19px`;
+    displayedWord.style.fontSize = `21px`;
   } else {
     displayedWord.style.fontSize = `35px`;
   }
@@ -91,7 +91,7 @@ window.onload = function () {
     wordIndex = japToKor ? japaneseWords.indexOf(randomWord) : koreanWords.indexOf(randomWord);
     document.getElementById('current-display-word').textContent = randomWord;
     if (displayedWord.textContent.length > 9) {
-      displayedWord.style.fontSize = `19px`;
+      displayedWord.style.fontSize = `21px`;
     } else {
       displayedWord.style.fontSize = `35px`;
     }
@@ -185,20 +185,14 @@ window.onload = function () {
 
     if (heightRatio > 0.80) {
       wordsDiv.style.height = `80%`;
-      wordsDiv.style.fontSize = `19px`
+      wordsDiv.style.fontSize = `20px`
     }
     if (heightRatio < 0.50) {
       wordsDiv.style.height = `70%`;
-      wordsDiv.style.fontSize = `35px`
+      wordsDiv.style.fontSize = `45px`
     }
 
   }
   appSizing();
-  //
-  // const goToVocabList = function () {
-  //   window.location.href='vocabList.html';
-  // }
-  //
-  // document.getElementById('showVocabList').addEventListener('click', goToVocabList);
-
+ 
 };
