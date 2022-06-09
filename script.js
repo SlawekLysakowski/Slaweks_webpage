@@ -33,10 +33,11 @@ const newWord = function () {
   let randomWord = wordsArray[newRandomNumber];
   wordIndex = japToKor ? japaneseWords.indexOf(randomWord) : koreanWords.indexOf(randomWord);
   document.getElementById('current-display-word').textContent = randomWord;
+  console.log(displayedWord.textContent.length)
   if (displayedWord.textContent.length > 10) {
-    displayedWord.style.fontSize = `25px`;
+    displayedWord.style.fontSize = `30px`;
   } else {
-    displayedWord.style.fontSize = `35px`;
+    displayedWord.style.fontSize = `40px`;
   }
   console.log(displayedWord.style.fontSize)
   japToKor ? answerKor = koreanWords[wordIndex] : answerJpy = japaneseWords[wordIndex];
@@ -160,7 +161,7 @@ const appSizing = function () {
 
   if (heightRatio > 0.80) {
     wordsDiv.style.height = `80%`;
-    wordsDiv.style.fontSize = `20px`
+    wordsDiv.style.fontSize = `23px`
   }
   if (heightRatio < 0.50) {
     wordsDiv.style.height = `70%`;
